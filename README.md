@@ -3,6 +3,62 @@
 
 ---
 
+## 多进程
+
+#### system.c
+
+system.c: 实现函数my_system，要求功能与system函数相同
+
+#### sh1.c: 实现shell程序，要求具备如下功能
+
+- 支持命令参数
+
+```shell
+$ echo arg1 arg2 arg3
+$ ls /bin /usr/bin /home
+```
+
+- 实现内置命令cd、pwd、exit
+
+```shell
+$ cd /bin
+$ pwd
+/bin
+```
+
+#### sh2.c: 实现shell程序，要求在第1版的基础上，添加如下功能
+
+- 实现文件重定向
+
+```shell
+$ echo hello >log
+$ cat log
+hello
+```
+
+#### sh3.c: 实现shell程序，要求在第2版的基础上，添加如下功能
+
+- 实现管道
+
+$ cat /etc/passwd | wc -l
+
+- 实现管道和文件重定向
+
+```shell
+$ cat input.txt
+3
+2
+1
+3
+2
+1
+$ cat <input.txt | sort | uniq | cat >output.txt
+$ cat output.txt
+1
+2
+3
+```
+
 ## 多线程
 
 #### pi1.c: 使用2个线程根据莱布尼兹级数计算PI
